@@ -13,7 +13,7 @@ jobs:
       - name: Build AIP
         uses: caphyon/advinst-github-action@main
         with:
-          advinst-version: '22.9'
+          advinst-version: '23.1'
           advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
           advinst-enable-automation: 'true'
           aip-path: ${{ github.workspace }}\sample.aip
