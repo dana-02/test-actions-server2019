@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="22.7" Modules="architect" RootPath="." Language="en" Id="{9902FCBD-3F5D-4626-8ECF-938846D05928}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="23.1" Modules="architect" RootPath="." Language="en" Id="{9902FCBD-3F5D-4626-8ECF-938846D05928}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
@@ -53,6 +53,9 @@
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
     <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
+    <ROW TimeStampUrl="http://timestamp.digicert.com" SignerDescription="[|ProductName]" SignOptions="7" SignTool="7" UseSha256="1" TSEndPoint="https://neu.codesigning.azure.net" TSAccountName="CaphyonDigitalSignature" TSCertName="Test-ACS"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
     <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
@@ -73,13 +76,11 @@
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
-    <ROW Dialog_="MessageDlg" Control="Ok" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_OK]" Order="200" TextLocId="-" MsiKey="MessageDlg#Ok"/>
-    <ROW Dialog_="MessageDlg" Control="Continue" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_Continue]" Order="300" TextLocId="-" MsiKey="MessageDlg#Continue"/>
-    <ROW Dialog_="MessageDlg" Control="TryAgain" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_TryAgain]" Order="400" TextLocId="-" MsiKey="MessageDlg#TryAgain"/>
-    <ROW Dialog_="MessageDlg" Control="Yes" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_Yes]" Order="500" TextLocId="-" MsiKey="MessageDlg#Yes"/>
-    <ROW Dialog_="MessageDlg" Control="No" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_No]" Order="600" TextLocId="-" MsiKey="MessageDlg#No"/>
-    <ROW Dialog_="MessageDlg" Control="Retry" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_Retry]" Order="700" TextLocId="-" MsiKey="MessageDlg#Retry"/>
-    <ROW Dialog_="MessageDlg" Control="Abort" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_Abort]" Order="800" TextLocId="-" MsiKey="MessageDlg#Abort"/>
+    <ROW Dialog_="MessageDlg" Control="Ok" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_OK]" Order="100" TextLocId="-" MsiKey="MessageDlg#Ok"/>
+    <ROW Dialog_="MessageDlg" Control="Continue" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_Continue]" Order="200" TextLocId="-" MsiKey="MessageDlg#Continue"/>
+    <ROW Dialog_="MessageDlg" Control="TryAgain" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_TryAgain]" Order="300" TextLocId="-" MsiKey="MessageDlg#TryAgain"/>
+    <ROW Dialog_="MessageDlg" Control="No" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_No]" Order="500" TextLocId="-" MsiKey="MessageDlg#No"/>
+    <ROW Dialog_="MessageDlg" Control="Retry" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_Retry]" Order="600" TextLocId="-" MsiKey="MessageDlg#Retry"/>
     <ROW Dialog_="MessageDlg" Control="Cancel" Type="PushButton" X="280" Y="90" Width="56" Height="17" Attributes="2" Text="[ButtonText_Cancel]" Order="900" TextLocId="-" MsiKey="MessageDlg#Cancel"/>
     <ROW Dialog_="MessageDlg" Control="Text" Type="Text" X="45" Y="20" Width="270" Height="55" Attributes="190611" Text="Default Text" Order="1000" TextLocId="-" MsiKey="MessageDlg#Text"/>
     <ROW Dialog_="MessageDlg" Control="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" Attributes="5242881" Text="[InfoIcon]" Order="1100" MsiKey="MessageDlg#Icon"/>
