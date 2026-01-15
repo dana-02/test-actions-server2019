@@ -2,6 +2,9 @@ name: Build Advanced Installer Project (.AIP)
 on: [workflow_dispatch]
 env: 
     advancedinstaller_url: https://www.advancedinstaller.com/downloads/advinst.msi
+    AZURE_TENANT_ID: ${{ secrets.SECRETS_TENANTID }}
+    AZURE_CLIENT_ID: ${{ secrets.SECRETS_CLIENTID }}
+    AZURE_CLIENT_SECRET: ${{ secrets.SECRETS_CLIENTSECRET }}
 
 jobs:
   advinst-aip-build-demo:
