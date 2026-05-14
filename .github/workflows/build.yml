@@ -5,6 +5,8 @@ env:
     AZURE_CLIENT_ID: ${{ secrets.SECRETS_CLIENTID }}
     AZURE_CLIENT_SECRET: ${{ secrets.SECRETS_CLIENTSECRET }}
 
+    advancedinstaller_url: https://www.advancedinstaller.com/downloads/advinst_rc.msi
+
 jobs:
   advinst-aip-build-demo:
     runs-on: windows-2022
